@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		910761362BA768E500046502 /* MealPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910761352BA768E500046502 /* MealPreview.swift */; };
+		919B023A2BA78507005C7739 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B02392BA78507005C7739 /* MealViewModel.swift */; };
 		91D6408D2BA765240063D7F2 /* RecipeLookUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6408C2BA765240063D7F2 /* RecipeLookUpApp.swift */; };
 		91D6408F2BA765240063D7F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6408E2BA765240063D7F2 /* ContentView.swift */; };
 		91D640912BA765250063D7F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D640902BA765250063D7F2 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		910761352BA768E500046502 /* MealPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPreview.swift; sourceTree = "<group>"; };
+		919B02392BA78507005C7739 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		91D640852BA765240063D7F2 /* RecipeLookUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeLookUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D640892BA765240063D7F2 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		91D6408C2BA765240063D7F2 /* RecipeLookUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLookUpApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		919B02382BA77E7D005C7739 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				919B02392BA78507005C7739 /* MealViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E60A3A2BA7785A00F60A4B /* AlphabeticOrderMeal.swift in Sources */,
+				919B023A2BA78507005C7739 /* MealViewModel.swift in Sources */,
 				91D6408F2BA765240063D7F2 /* ContentView.swift in Sources */,
 				91D640A42BA767580063D7F2 /* SideMenuItem.swift in Sources */,
 				91D640A02BA767170063D7F2 /* Meal.swift in Sources */,
