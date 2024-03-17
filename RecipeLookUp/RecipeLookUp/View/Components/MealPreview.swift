@@ -12,35 +12,40 @@ struct MealPreview: View {
     @State private var isHeartFilled = false
     
     var body: some View {
-        
-            ZStack(alignment: .bottom) {
-                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                    image
-                        .resizable()
-                        .cornerRadius(20)
-                        .frame(width: 300)
-                        .scaledToFit()
-                } placeholder: {
-                    ProgressView()
+        NavigationStack {
+            NavigationLink(destination: MealDetailView(meal: meal)) {
+                ZStack(alignment: .bottom) {
+                    HStack {
+                        AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                            image
+                                .resizable()
+                                .cornerRadius(20)
+                                .frame(width: 300)
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                    }
+                    
+                    HStack(alignment: .center) {
+                        Text(meal.strMeal)
+                            .bold()
+                        Button(action: {isHeartFilled.toggle()}) {
+                            Label("", systemImage: isHeartFilled ? "heart.fill":"heart")
+                        }.symbolEffect(.bounce.down, value: isHeartFilled)
+                    }
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(20)
+                    .offset(y: 30)
                 }
-                
-                HStack(alignment: .center) {
-                    Text(meal.strMeal)
-                        .bold()
-                    Button(action: {isHeartFilled.toggle()}) {
-                        Label("", systemImage: isHeartFilled ? "heart.fill":"heart")
-                    }.symbolEffect(.bounce.down, value: isHeartFilled)
-                }
-                .padding()
-                .background(.ultraThinMaterial)
-                .cornerRadius(20)
-                .offset(y: 30)
+                .frame(width: 180, height: 250)
+                .shadow(radius: 3)
             }
-            .frame(width: 180, height: 250)
-            .shadow(radius: 3)
-            
+        }
     }
 }
+
 
 struct MealPreview_Preview: PreviewProvider {
     static var previews: some View {
