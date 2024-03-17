@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		910761362BA768E500046502 /* MealPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910761352BA768E500046502 /* MealPreview.swift */; };
-		91D6408B2BA765240063D7F2 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 91D6408A2BA765240063D7F2 /* RealityKitContent */; };
 		91D6408D2BA765240063D7F2 /* RecipeLookUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6408C2BA765240063D7F2 /* RecipeLookUpApp.swift */; };
 		91D6408F2BA765240063D7F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6408E2BA765240063D7F2 /* ContentView.swift */; };
 		91D640912BA765250063D7F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D640902BA765250063D7F2 /* Assets.xcassets */; };
@@ -23,6 +22,7 @@
 		91E60A382BA7783000F60A4B /* MealsByCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A372BA7783000F60A4B /* MealsByCategory.swift */; };
 		91E60A3A2BA7785A00F60A4B /* AlphabeticOrderMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A392BA7785A00F60A4B /* AlphabeticOrderMeal.swift */; };
 		91E60A3C2BA7787F00F60A4B /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A3B2BA7787F00F60A4B /* MealDetail.swift */; };
+		91E60A3F2BA7796700F60A4B /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 91E60A3E2BA7796700F60A4B /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91D6408B2BA765240063D7F2 /* RealityKitContent in Frameworks */,
+				91E60A3F2BA7796700F60A4B /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +64,7 @@
 				91D640872BA765240063D7F2 /* RecipeLookUp */,
 				91D640882BA765240063D7F2 /* Packages */,
 				91D640862BA765240063D7F2 /* Products */,
+				91E60A3D2BA7796700F60A4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +163,13 @@
 			path = MyMeals;
 			sourceTree = "<group>";
 		};
+		91E60A3D2BA7796700F60A4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,7 +187,7 @@
 			);
 			name = RecipeLookUp;
 			packageProductDependencies = (
-				91D6408A2BA765240063D7F2 /* RealityKitContent */,
+				91E60A3E2BA7796700F60A4B /* RealityKitContent */,
 			);
 			productName = RecipeLookUp;
 			productReference = 91D640852BA765240063D7F2 /* RecipeLookUp.app */;
@@ -449,7 +457,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		91D6408A2BA765240063D7F2 /* RealityKitContent */ = {
+		91E60A3E2BA7796700F60A4B /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
 		};
