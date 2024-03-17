@@ -1,5 +1,5 @@
 //
-//  DiscoverMeals.swift
+//  AllMealsView.swift
 //  RecipeLookUp
 //
 //  Created by José Luis Corral on 17/3/24.
@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct DiscoverMeals: View {
+struct AllMealsView: View {
+ 
     var body: some View {
-        Text("Browse some new meals")
+    Text("All meals")
     }
 }
 
+
 #Preview {
-    DiscoverMeals()
+    AllMealsView()
 }
