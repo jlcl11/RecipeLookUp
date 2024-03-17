@@ -16,6 +16,8 @@
 		91D640A02BA767170063D7F2 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6409F2BA767170063D7F2 /* Meal.swift */; };
 		91D640A22BA767340063D7F2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D640A12BA767340063D7F2 /* Category.swift */; };
 		91D640A42BA767580063D7F2 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D640A32BA767580063D7F2 /* SideMenuItem.swift */; };
+		91E60A2E2BA7751400F60A4B /* MyMeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A2D2BA7751400F60A4B /* MyMeals.swift */; };
+		91E60A302BA7753500F60A4B /* DiscoverMeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A2F2BA7753500F60A4B /* DiscoverMeals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		91D6409F2BA767170063D7F2 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		91D640A12BA767340063D7F2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		91D640A32BA767580063D7F2 /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
+		91E60A2D2BA7751400F60A4B /* MyMeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMeals.swift; sourceTree = "<group>"; };
+		91E60A2F2BA7753500F60A4B /* DiscoverMeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMeals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				91D6409E2BA765F70063D7F2 /* Components */,
+				91E60A2D2BA7751400F60A4B /* MyMeals.swift */,
+				91E60A2F2BA7753500F60A4B /* DiscoverMeals.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,7 +209,9 @@
 				91D640A02BA767170063D7F2 /* Meal.swift in Sources */,
 				91D6408D2BA765240063D7F2 /* RecipeLookUpApp.swift in Sources */,
 				91D640A22BA767340063D7F2 /* Category.swift in Sources */,
+				91E60A2E2BA7751400F60A4B /* MyMeals.swift in Sources */,
 				910761362BA768E500046502 /* MealPreview.swift in Sources */,
+				91E60A302BA7753500F60A4B /* DiscoverMeals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
