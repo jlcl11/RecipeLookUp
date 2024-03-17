@@ -13,7 +13,7 @@ struct MealPreview: View {
     
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: MealDetailView(meal: meal)) {
+            NavigationLink(destination: MealDetail(meal: meal)) {
                 ZStack(alignment: .bottom) {
                     HStack {
                         AsyncImage(url: URL(string: meal.strMealThumb)) { image in
