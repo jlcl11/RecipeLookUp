@@ -15,20 +15,21 @@ class MealViewModel: ObservableObject {
     private init() {}
 
     func fetchAllMeals() {
-        let alphabet = "abcdefghijklmnopqrstuvwxyz"
-        var allMeals: [Meal] = []
+            let alphabet = "abcdefghijklmnopqrstuvwxyz"
+            var allMeals: [Meal] = []
 
-        alphabet.forEach { letter in
-            fetchMeals(forLetter: letter) { meals in
-                if let meals = meals {
-                    allMeals.append(contentsOf: meals)
-                    DispatchQueue.main.async {
-                        self.meals = allMeals
+            alphabet.forEach { letter in
+                fetchMeals(forLetter: letter) { meals in
+                    if let meals = meals {
+                        allMeals.append(contentsOf: meals)
+                        allMeals.sort { $0.strMeal < $1.strMeal } // Ordenar el array alfabéticamente
+                        DispatchQueue.main.async {
+                            self.meals = allMeals
+                        }
                     }
                 }
             }
         }
-    }
 
     private func fetchMeals(forLetter letter: Character, completion: @escaping ([Meal]?) -> Void) {
         let urlString = "https://www.themealdb.com/api/json/v1/1/search.php?f=\(letter)"
