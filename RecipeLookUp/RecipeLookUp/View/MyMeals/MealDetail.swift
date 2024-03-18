@@ -12,7 +12,7 @@ struct MealDetail: View {
     @State private var isHeartFilled = false
     
     var body: some View {
-        ZStack {
+        ZStack() {
             if let url = URL(string: meal.strMealThumb) {
                 AsyncImage(url: url) { phase in
                     switch phase {
@@ -31,7 +31,7 @@ struct MealDetail: View {
                     }
                 }
             }
-            
+           
             VStack(alignment:.leading) {
                 Text(meal.strMeal)
                     .foregroundStyle(.white.gradient)
@@ -40,7 +40,6 @@ struct MealDetail: View {
                     .padding()
                     .cornerRadius(8)
                 
-                Divider()
                 
                 HStack {
                     Button(action: { isHeartFilled.toggle(/*ingredients*/) }) {
@@ -54,12 +53,19 @@ struct MealDetail: View {
                     Button(action: { isHeartFilled.toggle(/*lets cook*/) }) {
                         Label("", systemImage: "play.circle.fill")
                     }.padding()
+                    
+                    Button(action: { isHeartFilled.toggle(/*watch the image clossely*/) }) {
+                        Label("", systemImage: "magnifyingglass")
+                    }
+                    
                 }
           
             }
             .background(.ultraThinMaterial)
             .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
             .padding()
+            .offset(x: 0, y: 200)
+            
         }
         .toolbar {
             ToolbarItem {
@@ -70,6 +76,8 @@ struct MealDetail: View {
         }
     }
 }
+
+
 
 struct MealDetail_Preview: PreviewProvider {
     static var previews: some View {
