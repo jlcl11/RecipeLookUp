@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		910761362BA768E500046502 /* MealPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910761352BA768E500046502 /* MealPreview.swift */; };
+		915A1F5F2BA8ADB0008B1289 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */; };
 		919B023A2BA78507005C7739 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B02392BA78507005C7739 /* MealViewModel.swift */; };
 		91D6408D2BA765240063D7F2 /* RecipeLookUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6408C2BA765240063D7F2 /* RecipeLookUpApp.swift */; };
 		91D6408F2BA765240063D7F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D6408E2BA765240063D7F2 /* ContentView.swift */; };
@@ -23,11 +24,11 @@
 		91E60A382BA7783000F60A4B /* MealsByCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A372BA7783000F60A4B /* MealsByCategory.swift */; };
 		91E60A3A2BA7785A00F60A4B /* AlphabeticOrderMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A392BA7785A00F60A4B /* AlphabeticOrderMeal.swift */; };
 		91E60A3C2BA7787F00F60A4B /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E60A3B2BA7787F00F60A4B /* MealDetail.swift */; };
-		91E60A3F2BA7796700F60A4B /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 91E60A3E2BA7796700F60A4B /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		910761352BA768E500046502 /* MealPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPreview.swift; sourceTree = "<group>"; };
+		915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 		919B02392BA78507005C7739 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		91D640852BA765240063D7F2 /* RecipeLookUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeLookUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D640892BA765240063D7F2 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
@@ -53,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E60A3F2BA7796700F60A4B /* RealityKitContent in Frameworks */,
+				915A1F5F2BA8ADB0008B1289 /* RealityKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +170,7 @@
 		91E60A3D2BA7796700F60A4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +192,6 @@
 			);
 			name = RecipeLookUp;
 			packageProductDependencies = (
-				91E60A3E2BA7796700F60A4B /* RealityKitContent */,
 			);
 			productName = RecipeLookUp;
 			productReference = 91D640852BA765240063D7F2 /* RecipeLookUp.app */;
@@ -459,13 +460,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		91E60A3E2BA7796700F60A4B /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91D6407D2BA765240063D7F2 /* Project object */;
 }
