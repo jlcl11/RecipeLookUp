@@ -59,7 +59,7 @@ struct MealDetail: View {
                     Button(action: {
                         openIngredientsWindow(id: "Instructions", value: meal)
                     }) {
-                        Label("", systemImage: "play.circle.fill")
+                        Label("", systemImage: "play.circle")
                     }.padding()
                     
                     Button(action: {
