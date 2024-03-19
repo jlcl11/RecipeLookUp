@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct MealDetail: View {
-    var meal: Meal
+    @Environment(\.openWindow) private var openIngredientsWindow
     @State private var isHeartFilled = false
-    
+   
+    var meal: Meal
+
     var body: some View {
         ZStack() {
             if let url = URL(string: meal.strMealThumb) {
@@ -42,19 +44,27 @@ struct MealDetail: View {
                 
                 
                 HStack {
-                    Button(action: { isHeartFilled.toggle(/*ingredients*/) }) {
+                    Button(action: { isHeartFilled.toggle() }) {
+                        Label("", systemImage: isHeartFilled ? "heart.fill" : "heart")
+                    }.symbolEffect(.bounce.down, value: isHeartFilled)
+                        .padding()
+                    
+                    Button(action: {
+                        openIngredientsWindow(id: "Ingredients", value: meal)
+                    }) {
                         Label("", systemImage: "carrot")
-                    }.padding()
-                    
-                    Button(action: { isHeartFilled.toggle(/*measures*/) }) {
-                        Label("", systemImage: "ruler")
                     }
+
                     
-                    Button(action: { isHeartFilled.toggle(/*lets cook*/) }) {
+                    Button(action: {
+                        
+                    }) {
                         Label("", systemImage: "play.circle.fill")
                     }.padding()
                     
-                    Button(action: { isHeartFilled.toggle(/*watch the image clossely*/) }) {
+                    Button(action: {
+                        
+                    }) {
                         Label("", systemImage: "magnifyingglass")
                     }
                     .padding(.trailing)
@@ -63,17 +73,10 @@ struct MealDetail: View {
           
             }
             .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+            .clipShape(RoundedRectangle(cornerRadius: 25.0))
             .padding()
             .offset(x: 0, y: 200)
             
-        }
-        .toolbar {
-            ToolbarItem {
-                Button(action: { isHeartFilled.toggle() }) {
-                    Label("", systemImage: isHeartFilled ? "heart.fill" : "heart")
-                }.symbolEffect(.bounce.down, value: isHeartFilled)
-            }
         }
     }
 }
@@ -89,4 +92,5 @@ struct MealDetail_Preview: PreviewProvider {
             .padding()
     }
 }
+
 
