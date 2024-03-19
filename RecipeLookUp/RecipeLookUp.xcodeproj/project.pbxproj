@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		910761362BA768E500046502 /* MealPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910761352BA768E500046502 /* MealPreview.swift */; };
+		915964312BA9CB3A00FCC6FF /* LetsCookModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915964302BA9CB3A00FCC6FF /* LetsCookModalView.swift */; };
+		915964332BA9CD3800FCC6FF /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915964322BA9CD3800FCC6FF /* CheckboxView.swift */; };
 		915A1F5F2BA8ADB0008B1289 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */; };
 		915E6E8E2BA9970A00095EAF /* IngredientsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915E6E8D2BA9970A00095EAF /* IngredientsModalView.swift */; };
 		919B023A2BA78507005C7739 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B02392BA78507005C7739 /* MealViewModel.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		910761352BA768E500046502 /* MealPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPreview.swift; sourceTree = "<group>"; };
+		915964302BA9CB3A00FCC6FF /* LetsCookModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsCookModalView.swift; sourceTree = "<group>"; };
+		915964322BA9CD3800FCC6FF /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 		915E6E8D2BA9970A00095EAF /* IngredientsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModalView.swift; sourceTree = "<group>"; };
 		919B02392BA78507005C7739 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				910761352BA768E500046502 /* MealPreview.swift */,
 				91E60A332BA7778900F60A4B /* SideBarMenu.swift */,
 				915E6E8D2BA9970A00095EAF /* IngredientsModalView.swift */,
+				915964302BA9CB3A00FCC6FF /* LetsCookModalView.swift */,
+				915964322BA9CD3800FCC6FF /* CheckboxView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 				915E6E8E2BA9970A00095EAF /* IngredientsModalView.swift in Sources */,
 				910761362BA768E500046502 /* MealPreview.swift in Sources */,
 				91E60A342BA7778900F60A4B /* SideBarMenu.swift in Sources */,
+				915964312BA9CB3A00FCC6FF /* LetsCookModalView.swift in Sources */,
+				915964332BA9CD3800FCC6FF /* CheckboxView.swift in Sources */,
 				91E60A302BA7753500F60A4B /* DiscoverMeals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

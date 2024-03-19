@@ -20,5 +20,11 @@ struct RecipeLookUpApp: App {
             }
         }.defaultSize(width: 200, height: 600)
 
+        WindowGroup(id: "Instructions", for: Meal.self) { mealBinding in
+            if let meal = mealBinding.wrappedValue {
+                LetsCookModalView(recipeSteps: meal.strInstructions)
+            }
+        }
+        
     }
 }
