@@ -7,11 +7,79 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct MealDetail: View {
+    @Environment(\.openWindow) private var openIngredientsWindow
+    @State private var isHeartFilled = false
+   
     var meal: Meal
     
     var body: some View {
-        Text("MealDetail")
+        ZStack() {
+            if let url = URL(string: meal.strMealThumb) {
+                AsyncImage(url: url) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .edgesIgnoringSafeArea(.all)
+                    case .failure(let error):
+                        Text("Error al cargar la imagen: \(error.localizedDescription)")
+                    case .empty:
+                        ProgressView()
+                    @unknown default:
+                        EmptyView()
+                    }
+                }
+            }
+           
+            VStack(alignment:.leading) {
+                Text(meal.strMeal)
+                    .foregroundStyle(.white.gradient)
+                    .bold()
+                    .font(.system(.extraLargeTitle, design: .rounded))
+                    .padding()
+                    .cornerRadius(8)
+                
+                
+                HStack {
+                    Button(action: { isHeartFilled.toggle() }) {
+                        Label("", systemImage: isHeartFilled ? "heart.fill" : "heart")
+                    }.symbolEffect(.bounce.down, value: isHeartFilled)
+                        .padding()
+                    
+                    Button(action: {
+                        openIngredientsWindow(id: "Ingredients", value: meal)
+                    }) {
+                        Label("", systemImage: "carrot")
+                    }
+
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Label("", systemImage: "play.circle.fill")
+                    }.padding()
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Label("", systemImage: "magnifyingglass")
+                    }
+                    .padding(.trailing)
+                    
+                }
+          
+            }
+            .background(.ultraThinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+            .padding()
+            .offset(x: 0, y: 200)
+            
+        }
     }
 }
 
