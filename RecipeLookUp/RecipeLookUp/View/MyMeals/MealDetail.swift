@@ -57,6 +57,7 @@ struct MealDetail: View {
                     Button(action: { isHeartFilled.toggle(/*watch the image clossely*/) }) {
                         Label("", systemImage: "magnifyingglass")
                     }
+                    .padding(.trailing)
                     
                 }
           
