@@ -26,5 +26,11 @@ struct RecipeLookUpApp: App {
             }
         }
         
+        WindowGroup(id: "ImageZoomed", for: Meal.self) { mealBinding in
+            if let meal = mealBinding.wrappedValue {
+                ImageZoomedModalView(imageString: meal.strMealThumb)
+            }
+        }.defaultSize(width: 2000, height: 1800)
+        
     }
 }

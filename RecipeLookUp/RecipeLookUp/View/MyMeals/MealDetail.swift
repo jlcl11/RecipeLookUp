@@ -63,7 +63,7 @@ struct MealDetail: View {
                     }.padding()
                     
                     Button(action: {
-                        
+                        openIngredientsWindow(id: "ImageZoomed", value: meal)
                     }) {
                         Label("", systemImage: "magnifyingglass")
                     }
