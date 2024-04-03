@@ -22,6 +22,9 @@ struct SideBarMenu: View {
                        .foregroundColor(.primary)
                    }
                )
+               .onAppear{
+                   mealViewModel.fetchAllMeals()
+               }
            }
            .navigationTitle("Discover")
        }
