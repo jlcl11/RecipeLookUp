@@ -11,6 +11,7 @@ class MealViewModel: ObservableObject {
     static let shared = MealViewModel()
 
     @Published var meals: [Meal] = []
+    @Published var categories: [Category] = []
 
     private init() {}
 
@@ -31,6 +32,33 @@ class MealViewModel: ObservableObject {
             }
         }
 
+     func fetchCategories() {
+           let urlString = "https://www.themealdb.com/api/json/v1/1/categories.php"
+           guard let url = URL(string: urlString) else {
+               print("Invalid URL")
+               return
+           }
+
+           URLSession.shared.dataTask(with: url) { data, response, error in
+               guard let data = data, error == nil else {
+                   print("Error fetching categories: \(error?.localizedDescription ?? "Unknown error")")
+                   return
+               }
+
+               do {
+                   let decoder = JSONDecoder()
+                   let decodedData = try decoder.decode([String: [Category]].self, from: data)
+                   if let categories = decodedData["categories"] {
+                       DispatchQueue.main.async {
+                           self.categories = categories
+                       }
+                   }
+               } catch {
+                   print("Error decoding categories: \(error)")
+               }
+           }.resume()
+       }
+    
     private func fetchMeals(forLetter letter: Character, completion: @escaping ([Meal]?) -> Void) {
         let urlString = "https://www.themealdb.com/api/json/v1/1/search.php?f=\(letter)"
         guard let url = URL(string: urlString) else {
