@@ -13,7 +13,8 @@ struct Meal: Codable,Hashable {
     let strInstructions: String
     let strMealThumb: String
     let strTags: String?
-    let strYoutube: String
+    let strYoutube: String?
+    let strCategory: String?
     let strIngredient1: String?
     let strIngredient2: String?
     let strIngredient3: String?
