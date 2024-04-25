@@ -7,9 +7,10 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
+    @Environment(SwiftDataViewModel.self) var swiftDataViewModel
+    
     var body: some View {
         
         TabView {
@@ -23,6 +24,9 @@ struct ContentView: View {
                     Label("Discover", systemImage: "safari")
                 }
             
+        }
+        .onAppear{
+            swiftDataViewModel.getLikedMeals()
         }
     }
 }
