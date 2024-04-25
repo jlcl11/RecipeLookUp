@@ -11,7 +11,7 @@ import SwiftUI
 struct RecipeLookUpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(SwiftDataViewModel())
         }
         
         WindowGroup(id: "Ingredients", for: Meal.self) { mealBinding in
