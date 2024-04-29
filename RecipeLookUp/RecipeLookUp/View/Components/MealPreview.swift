@@ -12,6 +12,10 @@ struct MealPreview: View {
     @State private var isHeartFilled = false
     @Environment(SwiftDataViewModel.self) var swiftDataViewModel
     
+    init(meal: Meal) {
+        self.meal = meal
+    }
+    
     var body: some View {
         NavigationStack {
             NavigationLink(destination: MealDetail(meal: meal)) {
