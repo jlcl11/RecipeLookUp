@@ -12,26 +12,31 @@ struct MyMeals: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 4), spacing: 12) {
-                    ForEach(Array(swiftDataViewModel.likedMeals.sorted(by: { $0.strMeal < $1.strMeal }))) { meal in
-                        MealPreview(meal: meal).padding(.bottom)
-                             
-                    }
-                }
-                .padding()
-                .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
-                        VStack(alignment:.leading) {
-                            Text("Liked Meals")
-                                .font(.extraLargeTitle)
-                                .bold()
-                     
+            
+            
+            if swiftDataViewModel.likedMeals.isEmpty {
+                Text("You haven't liked any meal yet")
+            } else {
+                ScrollView {
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 4), spacing: 12) {
+                        ForEach(Array(swiftDataViewModel.likedMeals.sorted(by: { $0.strMeal < $1.strMeal }))) { meal in
+                            MealPreview(meal: meal).padding(.bottom)
+                                 
                         }
                     }
-                }.padding(.horizontal)
+                    .padding()
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarLeading) {
+                            VStack(alignment:.leading) {
+                                Text("My Meals")
+                                    .font(.extraLargeTitle)
+                                    .bold()
+                         
+                            }
+                        }
+                    }.padding(.horizontal)
+                }
             }
-            
         }
     }
 }
