@@ -14,6 +14,7 @@
 		915964332BA9CD3800FCC6FF /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915964322BA9CD3800FCC6FF /* CheckboxView.swift */; };
 		915A1F5F2BA8ADB0008B1289 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */; };
 		915E6E8E2BA9970A00095EAF /* IngredientsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915E6E8D2BA9970A00095EAF /* IngredientsModalView.swift */; };
+		9170F3E12BDFC16C000BDA45 /* RandomMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170F3E02BDFC16C000BDA45 /* RandomMeal.swift */; };
 		917798142BD814E9000D4EF6 /* SwiftDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917798132BD814E9000D4EF6 /* SwiftDataViewModel.swift */; };
 		919B023A2BA78507005C7739 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B02392BA78507005C7739 /* MealViewModel.swift */; };
 		91A6FDE92BAAFB5300FEF8D1 /* ImageZoomedModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6FDE82BAAFB5300FEF8D1 /* ImageZoomedModalView.swift */; };
@@ -41,6 +42,7 @@
 		915964322BA9CD3800FCC6FF /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		915A1F5D2BA8AD8C008B1289 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 		915E6E8D2BA9970A00095EAF /* IngredientsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModalView.swift; sourceTree = "<group>"; };
+		9170F3E02BDFC16C000BDA45 /* RandomMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMeal.swift; sourceTree = "<group>"; };
 		917798132BD814E9000D4EF6 /* SwiftDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataViewModel.swift; sourceTree = "<group>"; };
 		919B02392BA78507005C7739 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		91A6FDE82BAAFB5300FEF8D1 /* ImageZoomedModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomedModalView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		91D6409E2BA765F70063D7F2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				91E60A3B2BA7787F00F60A4B /* MealDetail.swift */,
 				910761352BA768E500046502 /* MealPreview.swift */,
 				91E60A332BA7778900F60A4B /* SideBarMenu.swift */,
 				915E6E8D2BA9970A00095EAF /* IngredientsModalView.swift */,
@@ -172,6 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				91E60A2F2BA7753500F60A4B /* DiscoverMeals.swift */,
+				91E60A352BA777CE00F60A4B /* AllMealsView.swift */,
+				91E60A372BA7783000F60A4B /* CategoriesView.swift */,
+				91E60A392BA7785A00F60A4B /* AlphabeticOrderMeal.swift */,
+				9170F3E02BDFC16C000BDA45 /* RandomMeal.swift */,
 			);
 			path = DiscoverMeals;
 			sourceTree = "<group>";
@@ -180,10 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				91E60A2D2BA7751400F60A4B /* MyMeals.swift */,
-				91E60A352BA777CE00F60A4B /* AllMealsView.swift */,
-				91E60A372BA7783000F60A4B /* CategoriesView.swift */,
-				91E60A392BA7785A00F60A4B /* AlphabeticOrderMeal.swift */,
-				91E60A3B2BA7787F00F60A4B /* MealDetail.swift */,
 			);
 			path = MyMeals;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				9150BDF92BCD8B7700173AFF /* CategoryDisplayView.swift in Sources */,
 				91D640A42BA767580063D7F2 /* SideMenuItem.swift in Sources */,
 				91D640A02BA767170063D7F2 /* Meal.swift in Sources */,
+				9170F3E12BDFC16C000BDA45 /* RandomMeal.swift in Sources */,
 				9150BDF72BCD8AED00173AFF /* CategoryView.swift in Sources */,
 				91E60A3C2BA7787F00F60A4B /* MealDetail.swift in Sources */,
 				91E60A362BA777CE00F60A4B /* AllMealsView.swift in Sources */,

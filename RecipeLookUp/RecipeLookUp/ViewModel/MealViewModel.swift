@@ -23,7 +23,7 @@ class MealViewModel: ObservableObject {
                 fetchMeals(forLetter: letter) { meals in
                     if let meals = meals {
                         allMeals.append(contentsOf: meals)
-                        allMeals.sort { $0.strMeal < $1.strMeal } // Ordenar el array alfabéticamente
+                        allMeals.sort { $0.strMeal < $1.strMeal }
                         DispatchQueue.main.async {
                             self.meals = allMeals
                         }
