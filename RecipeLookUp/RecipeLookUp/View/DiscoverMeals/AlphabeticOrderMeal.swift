@@ -71,9 +71,6 @@ struct AlphabeticOrderMeal: View {
             }
         }
         .padding(.horizontal)
-        .onAppear {
-            mealViewModel.fetchAllMeals()
-        }
     }
 }
 

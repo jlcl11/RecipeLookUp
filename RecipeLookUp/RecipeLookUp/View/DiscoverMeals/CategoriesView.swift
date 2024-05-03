@@ -32,8 +32,5 @@ struct CategoriesView: View {
                 }
             }
         }
-        .onAppear {
-            mealViewModel.fetchCategories()
-        }
     }
 }
