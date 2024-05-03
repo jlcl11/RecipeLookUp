@@ -10,6 +10,7 @@ import RealityKit
 
 struct ContentView: View {
     @Environment(SwiftDataViewModel.self) var swiftDataViewModel
+    @StateObject var mealViewModel = MealViewModel.shared
     
     var body: some View {
         
@@ -27,6 +28,8 @@ struct ContentView: View {
         }
         .onAppear{
             swiftDataViewModel.getLikedMeals()
+            mealViewModel.fetchAllMeals()
+            mealViewModel.fetchCategories()
         }
     }
 }

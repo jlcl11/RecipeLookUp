@@ -37,9 +37,6 @@ struct AllMealsView: View {
             }
         }
         .padding(.horizontal)
-        .onAppear {
-            mealViewModel.fetchAllMeals()
-        }
     }
 }
 
