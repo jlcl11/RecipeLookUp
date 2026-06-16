@@ -26,7 +26,7 @@
 
 ## What is RecipeLookUp
 
-RecipeLookUp is a recipe discovery app built natively for **Apple Vision Pro**. It explores how an everyday task like browsing a recipe collection translates into spatial computing — windows, volumes, ornaments, hover effects and depth-aware layouts — while staying lightweight and offline-friendly.
+RecipeLookUp is a recipe discovery app built natively for **Apple Vision Pro**. It explores the visionOS multi-window pattern: opening a recipe spawns dedicated companion windows for ingredients, cooking steps and zoomed imagery — so you can pin the parts you need around your environment while you cook.
 
 Recipes are fetched from [TheMealDB](https://www.themealdb.com/) and stored locally with SwiftData so favourites survive between sessions and load instantly the next time you put the headset on.
 
@@ -36,10 +36,10 @@ Recipes are fetched from [TheMealDB](https://www.themealdb.com/) and stored loca
 
 | | |
 |---|---|
-| **Browse** | Search recipes by name, ingredient or category. Results render as cards laid out in a volumetric grid optimised for visionOS focus interactions. |
-| **Inspect** | Open a recipe to see ingredients, steps and the source video — each piece in its own panel using `Window` and `Ornament` patterns. |
-| **Save** | One-tap save into a local library backed by SwiftData. Works offline once a recipe has been viewed. |
-| **Spatial UI** | Hover effects, glass materials, depth and parallax — built using native visionOS controls, no UIKit shims. |
+| **Browse** | Search recipes by name, ingredient or category and discover new meals across the TheMealDB catalogue. |
+| **Multi-window** | Opening a recipe launches dedicated `WindowGroup` scenes — Ingredients, Instructions, ImageZoomed — each a separate visionOS window you can place anywhere. |
+| **Save** | One-tap save into a local library backed by SwiftData. Favourites persist across sessions. |
+| **Native visionOS** | Built entirely with SwiftUI on `xros`, no UIKit shims. |
 
 ---
 
@@ -47,13 +47,16 @@ Recipes are fetched from [TheMealDB](https://www.themealdb.com/) and stored loca
 
 ```
 RecipeLookUp/
-  App/                    visionOS scene definitions (Window + Volume)
-  Views/                  SwiftUI screens tuned for visionOS focus model
-    Components/           Cards, panels, ornaments
-  ViewModels/             @Observable state holders
-  Models/                 Meal, Ingredient, Category (Codable + SwiftData)
-  Networking/             URLSession async REST client for TheMealDB
-  Persistence/            ModelContainer setup + favourites store
+  RecipeLookUpApp.swift       visionOS scene tree — 4 WindowGroups (main + 3 companions)
+  View/
+    DiscoverMeals/            Browse + search by category / area / name
+    MyMeals/                  Saved favourites
+    Components/               Cards and reusable views
+  ViewModel/
+    MealViewModel.swift       Async REST fetch + state for the discover surface
+    SwiftDataViewModel.swift  Favourites persistence helpers
+  Model/
+    Meal.swift                Codable + SwiftData model for recipes
 ```
 
 - **SwiftUI** for declarative UI tuned to visionOS interaction patterns
@@ -81,11 +84,10 @@ Build for "Apple Vision Pro" or the visionOS Simulator and run.
 
 | Technology | Role |
 |---|---|
-| **SwiftUI on visionOS** | Native spatial UI — windows, volumes, ornaments, hover effects |
+| **SwiftUI on visionOS** | Native UI on `xros` deployment target — multi-window scene tree |
 | **SwiftData** | Local persistence of saved recipes |
-| **URLSession + async/await** | REST client for TheMealDB (no third-party deps) |
-| **@Observable** | Reactive state management |
-| **MVVM** | Clean separation of view, view-model and data layers |
+| **URLSession + async/await** | REST client for TheMealDB |
+| **MVVM** | View-model layer mediates between SwiftUI views and data |
 
 ---
 
